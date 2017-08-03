@@ -1,4 +1,4 @@
-myAudio = new Audio('nba.mp3');
+myAudio = new Audio('nbc.mp3');
 myAudio.addEventListener('ended', function() {
   this.currentTime = 0;
   this.play();
@@ -9,11 +9,13 @@ var totalRight = 0;
 
 var totalWrong = 0;
 
+var unanswered = 0;
+
 var time = 15;
 
 var intervalId;
 
-var questions = ["Which team is the all time leader in titles?", "Which player leads all time in scoring?", "Who is the all time assits leader?"];
+var questions = ["Which team is the all time leader in titles?", "Which player leads all time in scoring?", "Who is the all time assits leader?", "Which draft class was Kobe Bryant and Allen Iverson apart of?"];
 
 var answers = {
 
@@ -22,6 +24,8 @@ var answers = {
   two : ["Michael Jordan", "Kobe Bryant", "Kareem Abdul-Jabar"],
 
   three: ["Magic Johnson", "Oscar Robertson", "John Stockton"],
+
+  four: ["1996", "2003", "1992"],
 
 }
 
@@ -32,7 +36,7 @@ function run() {
 function decrement() {
   time--;
 
-  $(".time").html("<h2>" + time + "</h2>");
+  $(".time").html("<h2>" +"Time Left:"+ " " + time + "</h2>");
 
   if(time === 0){
     finalScore();
@@ -51,6 +55,8 @@ function initialize(){
 
   $("#questionThree").html(questions[2] + "<div>"+"<input type='radio' name='thirdAnswer' class='wrong'>" +answers.three[0]+ "</input>"+"<input type='radio' name='thirdAnswer' class='wrong'>" +answers.three[1]+ "</input>"+"<input type='radio' name='thirdAnswer' class='correct'>" +answers.three[2]+ "</input>"+"</div>");
 
+  $("#questionFour").html(questions[3] + "<div>"+"<input type='radio' name='fourthAnswer' class='correct'>" +answers.four[0]+ "</input>"+"<input type='radio' name='fourthAnswer' class='wrong'>" +answers.four[1]+ "</input>"+"<input type='radio' name='fourthAnswer' class='wrong'>" +answers.four[2]+ "</input>"+"</div>");
+
   $("#done").html("<button type='button' id='doneButton' class='btn btn-default btn-lg'>DONE!</button>");
 
   $("#startButton").remove();
@@ -60,6 +66,7 @@ function initialize(){
 
 function finalScore(){
   clearInterval(intervalId);
+  $(".time").remove();
 
     $(".correct:checked").is(function (){
       totalRight++;
@@ -69,7 +76,8 @@ function finalScore(){
       totalWrong++;
     });
 
-  $(".game").html("<p>" + "ALL DONE!!!" + "</p>"+ "<div>" +"correct:"+ totalRight + "</div>" + "<div>" +"wrong:"+totalWrong + "</div>");
+
+  $(".game").html("<p>" + "ALL DONE!!!" + "</p>"+ "<div>" +"correct:"+ totalRight + "</div>" + "<div>" +"wrong:"+totalWrong + "</div>"+ "<img src='http://i.imgur.com/gTZOWH4.gif'>");
 }
 
 
