@@ -11,7 +11,7 @@ var totalWrong = 0;
 
 var unanswered = 0;
 
-var time = 15;
+var time = 25;
 
 var intervalId;
 
