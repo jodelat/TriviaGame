@@ -77,7 +77,7 @@ function finalScore(){
     });
 
 
-  $(".game").html("<p>" + "ALL DONE!!!" + "</p>"+ "<div>" +"correct:"+ totalRight + "</div>" + "<div>" +"wrong:"+totalWrong + "</div>"+ "<img src='http://i.imgur.com/gTZOWH4.gif'>");
+  $(".game").html("<p>" + "ALL DONE!!!" + "</p>"+ "<div>" +"correct:"+ totalRight + "</div>" + "<div>" +"wrong:"+totalWrong + "</div>"+ "<img src='assets/images/kobe.gif'>");
 }
 
 
