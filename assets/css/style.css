@@ -1,0 +1,30 @@
+body{
+  background-image: url("http://57tmall.com/data/out/2/5058555-nba-backgrounds.jpg");
+  font-family: arial;
+}
+
+.container{
+  text-align: center;
+  background-color: #cccccc;
+  opacity: 0.9;
+  height: 635px;
+  width: 350px;
+  position: fixed;
+  left: 10%;
+  top: 10%;
+}
+
+#startButton{
+  position: absolute;
+  top: 30%;
+  right: 42%;
+  height: 75px;
+  width: 200px;
+}
+.game {
+  font-size: 22px;
+}
+
+.game p{
+  font-size: 30px;
+}
