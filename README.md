@@ -1,3 +1,3 @@
 # TriviaGame
 
-A NBA trivia game built in javascript.
+A NBA trivia game built in JQUERY.
